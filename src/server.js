@@ -6,8 +6,11 @@ import progressRoutes from './routes/progressRoutes.js'
 import leaderboardRoutes from './routes/leaderboardRoutes.js'
 import challengeRoutes from './routes/challengeRoutes.js'
 import roundRoutes from './routes/roundRoutes.js'
+<<<<<<< HEAD
 import authRoutes from './routes/authRoutes.js'
 import scoreRoutes from './routes/scoreRoutes.js'
+=======
+>>>>>>> 621f93e447eb108b74b886289ce0ce031ce2e823
 
 dotenv.config()
 
@@ -16,16 +19,23 @@ const app = express()
 app.use(cors({
   origin: '*'
 }))
+<<<<<<< HEAD
 
 app.use(express.json())
 
 app.use('/api', authRoutes)
+=======
+app.use(express.json())
+>>>>>>> 621f93e447eb108b74b886289ce0ce031ce2e823
 app.use('/api', submissionRoutes)
 app.use('/api', progressRoutes)
 app.use('/api', leaderboardRoutes)
 app.use('/api', challengeRoutes)
 app.use('/api', roundRoutes)
+<<<<<<< HEAD
 app.use('/api', scoreRoutes)
+=======
+>>>>>>> 621f93e447eb108b74b886289ce0ce031ce2e823
 
 app.get('/', (req, res) => {
   res.send('Imperium Backend Running')

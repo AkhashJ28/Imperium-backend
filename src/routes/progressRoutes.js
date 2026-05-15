@@ -1,5 +1,6 @@
 import express from 'express'
 import supabase from '../config/supabase.js'
+<<<<<<< HEAD
 import { requireAuth } from '../middleware/auth.js'
 
 const router = express.Router()
@@ -8,6 +9,15 @@ router.get('/progress', requireAuth, async (req, res) => {
   try {
 
     const userId = req.user.id
+=======
+
+const router = express.Router()
+
+router.get('/progress/:userId', async (req, res) => {
+  try {
+
+    const { userId } = req.params
+>>>>>>> 621f93e447eb108b74b886289ce0ce031ce2e823
 
     const { data, error } = await supabase
       .from('submissions')

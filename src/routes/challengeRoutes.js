@@ -1,10 +1,17 @@
 import express from 'express'
+<<<<<<< HEAD
 import { requireAuth } from '../middleware/auth.js'
+=======
+>>>>>>> 621f93e447eb108b74b886289ce0ce031ce2e823
 import supabase from '../config/supabase.js'
 
 const router = express.Router()
 
+<<<<<<< HEAD
 router.get('/challenges', requireAuth, async (req, res) => {
+=======
+router.get('/challenges', async (req, res) => {
+>>>>>>> 621f93e447eb108b74b886289ce0ce031ce2e823
 
   try {
 

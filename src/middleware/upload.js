@@ -4,6 +4,7 @@ const storage = multer.memoryStorage()
 
 const upload = multer({
   storage,
+<<<<<<< HEAD
 
   fileFilter: (req, file, cb) => {
 
@@ -51,6 +52,18 @@ const upload = multer({
     )
   }
 
+=======
+  limits: {
+    fileSize: 2 * 1024 * 1024 // 2MB
+  },
+  fileFilter: (req, file, cb) => {
+    if (file.mimetype === 'text/csv') {
+      cb(null, true)
+    } else {
+      cb(new Error('Only CSV files are allowed'))
+    }
+  }
+>>>>>>> 621f93e447eb108b74b886289ce0ce031ce2e823
 })
 
 export default upload

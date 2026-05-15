@@ -15,7 +15,10 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+<<<<<<< HEAD
     "jsonwebtoken": "^9.0.3",
+=======
+>>>>>>> 621f93e447eb108b74b886289ce0ce031ce2e823
     "multer": "^2.1.1"
   },
   "devDependencies": {
